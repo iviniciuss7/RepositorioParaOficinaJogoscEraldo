@@ -5,9 +5,9 @@ using UnityEngine;
 public class enemyFollow : MonoBehaviour
 {
     public float velocity;
-    [SerializeField] Transform target;
+    [SerializeField] Collider2D barreira;
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, velocity * Time.deltaTime);
+        
     }
 }
