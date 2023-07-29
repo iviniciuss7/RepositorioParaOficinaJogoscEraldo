@@ -48,7 +48,7 @@ public class PlayerWalk : MonoBehaviour
             {
                 if (puloDuplo)
                 {
-                    rigP.velocity = new Vector2(rigP.velocity.x, forcadoPulo * 2);
+                    rigP.velocity = new Vector2(rigP.velocity.x, forcadoPulo);
                     puloDuplo = false;
                 }
             }
