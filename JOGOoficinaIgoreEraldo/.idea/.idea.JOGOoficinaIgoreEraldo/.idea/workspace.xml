@@ -11,7 +11,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OTHERS/PlatFall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/pLAYER/VidaDoPlayer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2TE1goWRBZkH0GAjmbEaid1gBmZ" />
   <component name="ProjectViewState">
@@ -85,6 +87,7 @@
       <updated>1690593542750</updated>
       <workItem from="1690593542752" duration="1397000" />
       <workItem from="1690684219442" duration="3604000" />
+      <workItem from="1690803777308" duration="5440000" />
     </task>
     <servers />
   </component>

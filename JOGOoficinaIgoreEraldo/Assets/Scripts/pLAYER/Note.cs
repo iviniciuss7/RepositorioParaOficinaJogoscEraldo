@@ -10,7 +10,8 @@ public class Note : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] Transform gfx;
     [SerializeField] float rotateSpeed;
-    
+    [SerializeField] private int dano;
+
     void Start()
     {
         Destroy(gameObject, 2.5f);
@@ -24,6 +25,10 @@ public class Note : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.GetComponent<Enemy>().takeDamage(dano);
+            Destroy(gameObject);
+        }
     }
 }
