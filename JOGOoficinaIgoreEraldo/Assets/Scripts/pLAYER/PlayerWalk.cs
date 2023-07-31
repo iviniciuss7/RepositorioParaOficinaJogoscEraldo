@@ -1,15 +1,20 @@
-    using System;
-    using System.Collections;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerWalk : MonoBehaviour
 {
+    [Header("Fisica")]
     [SerializeField] float velocity;
     [SerializeField] float forcadoPulo;
-    [SerializeField] Rigidbody2D rigP;
-    Vector3 angleLeft;
 
+    [Header("Componentes")]
+    [SerializeField] Rigidbody2D rigP;
+    [SerializeField] Animator anim;
+    [SerializeField] AudioSource sound;
+    Vector3 angleLeft;
+    [Header("Booleanos")]
     public bool noAr;
     public bool puloDuplo;
 
@@ -28,19 +33,23 @@ public class PlayerWalk : MonoBehaviour
 
         rigP.velocity = new Vector2(movement * velocity, rigP.velocity.y);
 
+        
         if (movement > 0)
         {
             transform.eulerAngles = Vector3.zero;
         }
         else if (movement < 0)
+        {
             transform.eulerAngles = angleLeft;
+        }
     }
     void Pulo()
     {
         if (Input.GetButtonDown("Jump"))
-        {
+        { 
             if (!noAr)
             {
+                sound.Play();
                 rigP.velocity = new Vector2(rigP.velocity.x, forcadoPulo);
                 puloDuplo = true;
                 noAr = true;
@@ -49,6 +58,7 @@ public class PlayerWalk : MonoBehaviour
             {
                 if (puloDuplo)
                 {
+                    sound.Play();
                     rigP.velocity = new Vector2(rigP.velocity.x, forcadoPulo);
                     puloDuplo = false;
                 }
