@@ -1,4 +1,5 @@
-using System.Collections;
+    using System;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -59,6 +60,15 @@ public class PlayerWalk : MonoBehaviour
         if (col.gameObject.layer == 6)
         {
             noAr = false;
+            transform.parent = col.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.layer == 6)
+        {
+            transform.parent = null;
         }
     }
 }
