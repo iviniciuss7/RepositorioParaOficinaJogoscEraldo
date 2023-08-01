@@ -28,7 +28,7 @@ public class Note : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             collision.GetComponent<Enemy>().takeDamage(dano);
-            Destroy(gameObject);
+            Destroy(gameObject, 0.2f);
         }
     }
 }

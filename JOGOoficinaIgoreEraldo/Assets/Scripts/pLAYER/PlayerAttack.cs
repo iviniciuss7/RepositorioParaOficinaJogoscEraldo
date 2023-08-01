@@ -14,7 +14,7 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.E) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-            anim.SetTrigger("Shoot");
+            //anim.SetTrigger("Shoot");
             GameObject tempNote = Instantiate(tiro, spawner.position, spawner.rotation);
         }
     }

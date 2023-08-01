@@ -13,16 +13,11 @@ public class Enemy : MonoBehaviour
 
     [Header("Componentes")]
     [SerializeField] Rigidbody2D rig;
-    [SerializeField] private Animator anim;
+    [SerializeField] HeartController player;
+    public PlayerWalk playerlogic;
 
     [Header("Booleanos")]
     bool walkRight;
-    
-
-    private void Start()
-    {
-        anim = GetComponent<Animator>();
-    }
 
     void FixedUpdate()
     {
@@ -48,15 +43,17 @@ public class Enemy : MonoBehaviour
     public void takeDamage(int dmg)
     {
         health -= dmg;
-        anim.SetTrigger("Hit");
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
         
     }
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Teste");
-            collision.gameObject.GetComponent<PlayerWalk>().Damage(1);
+            player.vida--;
         }
-    }*/
+    }
 }

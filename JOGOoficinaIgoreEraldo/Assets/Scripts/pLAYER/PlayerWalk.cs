@@ -8,10 +8,11 @@ public class PlayerWalk : MonoBehaviour
     [Header("Fisica")]
     [SerializeField] float velocity;
     [SerializeField] float forcadoPulo;
+    public float movementInstance;
 
     [Header("Componentes")]
     [SerializeField] Rigidbody2D rigP;
-    [SerializeField] Animator anim;
+    public Animator anim;
     [SerializeField] AudioSource sound;
     Vector3 angleLeft;
     [Header("Booleanos")]
@@ -30,6 +31,7 @@ public class PlayerWalk : MonoBehaviour
     private void Move()
     {
         float movement = Input.GetAxis("Horizontal");
+        movementInstance = movement;
 
         rigP.velocity = new Vector2(movement * velocity, rigP.velocity.y);
 
