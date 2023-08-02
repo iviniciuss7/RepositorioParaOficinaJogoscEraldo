@@ -14,10 +14,15 @@ public class Enemy : MonoBehaviour
     [Header("Componentes")]
     [SerializeField] Rigidbody2D rig;
     [SerializeField] HeartController player;
-    public PlayerWalk playerlogic;
+    private PlayerAnimationController playerAnimationController;
 
     [Header("Booleanos")]
     bool walkRight;
+
+    private void Awake()
+    {
+       playerAnimationController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAnimationController>();    
+    }
 
     void FixedUpdate()
     {
@@ -53,6 +58,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            playerAnimationController.Damage();
             player.vida--;
         }
     }

@@ -11,11 +11,13 @@ public class GameController : MonoBehaviour
     public int scoreCoin; 
     public static GameController instance;
     public GameObject pauseObj;
+    private bool gameOverOpen;
     private bool pauseNo;
     public GameObject gameOverObj;
-    void Start()
+    void Awake()
     {
         instance = this;
+        gameOverOpen = false;   
     }
 
     private void Update()
@@ -31,13 +33,11 @@ public class GameController : MonoBehaviour
 
     public void PauseGame()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape)&& !gameOverOpen)
         {
             pauseNo = !pauseNo;
             pauseObj.SetActive(pauseNo);
-            
         }
-
         if (pauseNo)
         {
             Time.timeScale = 0f;
@@ -71,14 +71,7 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         gameOverObj.SetActive(true);
-        if (gameOverObj == true)
-        {
-            Time.timeScale = 0f;
-        }
-
-        else
-        {
-            Time.timeScale = 1f;
-        }
+        pauseNo = true;
+        gameOverOpen = true;    
     }
 }

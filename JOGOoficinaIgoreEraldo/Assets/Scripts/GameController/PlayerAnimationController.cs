@@ -36,4 +36,13 @@ public class PlayerAnimationController : MonoBehaviour
         }
 
     }
+    public void Attack()
+    {
+        animator.SetTrigger("Tiro");
+    }
+
+    public void Damage()
+    {
+        animator.SetTrigger("Damage");
+    }
 }

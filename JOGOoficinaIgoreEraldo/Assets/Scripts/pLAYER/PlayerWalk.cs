@@ -72,9 +72,12 @@ public class PlayerWalk : MonoBehaviour
         if (col.gameObject.layer == 6)
         {
             noAr = false;
+        }
+        if(col.gameObject.layer == 10)
+        {
+            noAr = false;
             transform.parent = col.transform;
         }
-
         if (col.gameObject.layer == 9)
         {
             GameController.instance.GameOver();
@@ -83,7 +86,7 @@ public class PlayerWalk : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.layer == 6)
+        if (other.gameObject.layer == 10)
         {
             transform.parent = null;
         }

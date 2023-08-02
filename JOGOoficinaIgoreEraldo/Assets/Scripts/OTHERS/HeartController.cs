@@ -12,10 +12,7 @@ public class HeartController : MonoBehaviour
     public Image[] corasao;
     public Sprite cheio;
     public Sprite vazio;
-    
-    
-    
-    
+
     void Update()
     {
         LifeLogic();
