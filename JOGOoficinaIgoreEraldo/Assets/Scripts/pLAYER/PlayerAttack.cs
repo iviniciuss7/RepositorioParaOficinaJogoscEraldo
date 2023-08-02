@@ -11,10 +11,10 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] Transform spawner;
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.E) && Time.time > nextFire)
+        if (Input.GetKeyUp(KeyCode.G) && Time.time > nextFire)
         {
+            anim.SetInteger("Transition", 3);
             nextFire = Time.time + fireRate;
-            //anim.SetTrigger("Shoot");
             GameObject tempNote = Instantiate(tiro, spawner.position, spawner.rotation);
         }
     }

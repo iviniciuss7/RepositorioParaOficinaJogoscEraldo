@@ -74,6 +74,11 @@ public class PlayerWalk : MonoBehaviour
             noAr = false;
             transform.parent = col.transform;
         }
+
+        if (col.gameObject.layer == 9)
+        {
+            GameController.instance.GameOver();
+        }
     }
 
     private void OnCollisionExit2D(Collision2D other)

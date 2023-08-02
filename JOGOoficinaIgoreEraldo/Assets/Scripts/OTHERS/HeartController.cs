@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HeartController : MonoBehaviour
 {
@@ -54,6 +55,8 @@ public class HeartController : MonoBehaviour
         {
             GetComponent<PlayerWalk>().enabled = false;
             Destroy(gameObject, 0.5f); 
+            GameController.instance.GameOver();
         }
     }
+    
 }
