@@ -4,6 +4,7 @@ public class PlayerAnimationController : MonoBehaviour
 {
     [SerializeField] Animator animator;
     private PlayerWalk playerWalkScript;
+    public PlayerAttack PlayerAttack;  
 
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class PlayerAnimationController : MonoBehaviour
             animator.SetInteger("Transition", 1);
         }
         else
-        {
+        { 
             animator.SetInteger("Transition", 0);
         }
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2591380044435482813}
   m_Layer: 7
   m_Name: sextou
-  m_TagString: Untagged
+  m_TagString: Player_bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 569673158431917459}
   m_Layer: 7
   m_Name: note_bullet
-  m_TagString: Untagged
+  m_TagString: Player_bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MovingPlatform
   - Enemy
+  - Player_bullet
   layers:
   - Default
   - TransparentFX

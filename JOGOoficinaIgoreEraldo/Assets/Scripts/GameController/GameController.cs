@@ -58,9 +58,27 @@ public class GameController : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene(0);
+        if (gameOverObj == true)
+        {
+            Time.timeScale = 0f;
+        }
+
+        else
+        {
+            Time.timeScale = 1f;
+        }
     }
     public void GameOver()
     {
         gameOverObj.SetActive(true);
+        if (gameOverObj == true)
+        {
+            Time.timeScale = 0f;
+        }
+
+        else
+        {
+            Time.timeScale = 1f;
+        }
     }
 }
