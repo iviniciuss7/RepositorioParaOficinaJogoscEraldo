@@ -45,6 +45,12 @@ public class PlayerWalk : MonoBehaviour
             transform.eulerAngles = angleLeft;
         }
     }
+
+    void Dash()
+    {
+        
+    }
+    
     void Pulo()
     {
         if (Input.GetButtonDown("Jump"))

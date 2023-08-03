@@ -11,8 +11,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController/ChegadaLoad.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController/GuitarAwardAvanced.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OTHERS/Coin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OTHERS/MenuWin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OTHERS/PlatFall.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2TE1goWRBZkH0GAjmbEaid1gBmZ" />
@@ -88,7 +91,8 @@
       <workItem from="1690593542752" duration="1397000" />
       <workItem from="1690684219442" duration="3604000" />
       <workItem from="1690803777308" duration="5791000" />
-      <workItem from="1690934386396" duration="6650000" />
+      <workItem from="1690934386396" duration="6974000" />
+      <workItem from="1691019877481" duration="2573000" />
     </task>
     <servers />
   </component>

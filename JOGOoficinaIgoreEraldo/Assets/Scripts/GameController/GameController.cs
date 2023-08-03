@@ -74,4 +74,5 @@ public class GameController : MonoBehaviour
         pauseNo = true;
         gameOverOpen = true;    
     }
+
 }
