@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] Rigidbody2D rig;
     [SerializeField] HeartController player;
     private PlayerAnimationController playerAnimationController;
+    [SerializeField] GameObject drop;
 
     [Header("Booleanos")]
     bool walkRight;
@@ -50,6 +51,7 @@ public class Enemy : MonoBehaviour
         health -= dmg;
         if(health <= 0)
         {
+            Instantiate(drop, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
         

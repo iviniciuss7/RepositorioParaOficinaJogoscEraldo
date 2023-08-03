@@ -8,45 +8,32 @@ public class SpecialPower : MonoBehaviour
     [SerializeField] float atual;
     [SerializeField] UnityEngine.UI.Image fill;
 
-    private bool poderEspecialAtivado = false;
+    public bool poderEspecialAtivado = false;
 
-    void Update()
+    public void UsarPoderEspecial()
     {
-        if (poderEspecialAtivado)
+        DefinirValorDaBarra(0);
+        poderEspecialAtivado=false;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Energia"))
         {
-            // Exemplo: Código que será executado quando o poder especial estiver ativado.
-            // Por exemplo, você pode fazer o personagem ficar mais forte ou realizar uma animação especial.
-            // Exemplo: personagem.AtivarPoderEspecial();
-            // Exemplo: animacaoAtivarPoder.Play();
-            // Exemplo: ReiniciarBarra();
-        }
-        else
-        {
-            fill.fillAmount = atual / maximo;
-
-            if (fill.fillAmount >= 1.0f)
+            DefinirValorDaBarra(atual + 2);
+            Destroy(collision.gameObject);
+            if (atual >= maximo)
             {
-                AtivarPoderEspecial();
+                poderEspecialAtivado=true;
             }
         }
     }
-
-    private void AtivarPoderEspecial()
+    private void DefinirValorDaBarra(float novoValor)
     {
-        // Exemplo: Código que será executado quando o poder especial for ativado.
-        // Por exemplo, você pode fazer o personagem ficar mais forte ou realizar uma animação especial.
-        // Exemplo: personagem.FicarMaisForte();
-        // Exemplo: animacaoAtivarPoder.Play();
-        // Exemplo: ReiniciarBarra();
-
-        // Reinicia a barra para permitir a recarga do poder especial.
-        ReiniciarBarra();
+        atual = novoValor;
+        AtualizarBarra();
     }
-
-    private void ReiniciarBarra()
+    void AtualizarBarra()
     {
-        // Reinicia a barra de poder.
-        atual = 0f;
-        fill.fillAmount = 0f;
+        fill.fillAmount = atual / maximo;
     }
 }
