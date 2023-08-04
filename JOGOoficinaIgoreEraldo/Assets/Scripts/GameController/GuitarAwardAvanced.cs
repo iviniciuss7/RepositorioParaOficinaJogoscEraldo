@@ -8,9 +8,10 @@ public class GuitarAwardAvanced : MonoBehaviour
  
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.E) && other.gameObject.CompareTag("Guitar"))
         {
             SceneManager.LoadScene(2);
         }
+        
     }
 }

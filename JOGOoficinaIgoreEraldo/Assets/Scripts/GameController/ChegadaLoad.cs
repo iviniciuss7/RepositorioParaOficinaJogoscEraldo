@@ -7,7 +7,7 @@ public class ChegadaLoad : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.E) && other.gameObject.CompareTag("Chegada"))
         {
             SceneManager.LoadScene(3);
         }

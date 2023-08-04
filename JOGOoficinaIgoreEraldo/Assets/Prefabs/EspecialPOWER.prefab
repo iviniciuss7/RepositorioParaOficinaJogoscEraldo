@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5472548598777755091}
   - component: {fileID: 4650659601999057512}
   m_Layer: 0
-  m_Name: EspecialPINTO
+  m_Name: EspecialPOWER
   m_TagString: Energia
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

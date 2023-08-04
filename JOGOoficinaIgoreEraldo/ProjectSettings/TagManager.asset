@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Player_bullet
   - Energia
+  - Chegada
+  - Guitar
   layers:
   - Default
   - TransparentFX
