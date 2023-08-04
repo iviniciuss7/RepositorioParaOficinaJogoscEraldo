@@ -14603,7 +14603,7 @@ PrefabInstance:
       objectReference: {fileID: 1747490791}
     - target: {fileID: 1718073763, guid: 3e6f5740063392148b65c866660fbaf4, type: 3}
       propertyPath: walktime
-      value: 4
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 1718073763, guid: 3e6f5740063392148b65c866660fbaf4, type: 3}
       propertyPath: playerlogic
@@ -20065,6 +20065,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1747490791}
+    - target: {fileID: 1718073763, guid: 3e6f5740063392148b65c866660fbaf4, type: 3}
+      propertyPath: walktime
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1718073763, guid: 3e6f5740063392148b65c866660fbaf4, type: 3}
       propertyPath: playerlogic
       value: 
